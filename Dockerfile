@@ -104,9 +104,6 @@ RUN PKG_CONFIG="/usr/bin/$(xx-info)-pkg-config" \
 # Download and extract web UI
 RUN mkdir /static ; STATIC_DIR='/static' ./tools/sync-web-ui.sh
 
-# lcnew
-RUN chgrp -R 0 /some/directory && \
-    chmod -R g=u /some/directory 
 
 FROM debian:12-slim AS qdrant
 
